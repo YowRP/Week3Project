@@ -26,4 +26,19 @@ def generate_report(total_units, deliveries_processed, failed_attempts):
     print("Deliveries processed : " + str(deliveries_processed))
     print("Failed attempts : " + str(failed_attempts))
 
+def main() :
+    total_units = 0
+    deliveries_processed = 0
+    failed_attempts = 0
+    while True:
+        user_input, attempts = get_valid_input()
+        failed_attempts += attempts
+        if user_input is None:
+            break
+        else:
+            total_units = process_delivery(total_units, user_input)
+            tax = calculate_tax(user_input)
+            deliveries_processed += 1
+
+    generate_report(total_units, deliveries_processed, failed_attempts)
 
