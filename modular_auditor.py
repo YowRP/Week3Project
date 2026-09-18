@@ -29,8 +29,10 @@ def generate_report(total_units, failed_attempts):
 def main() :
     total_units = 0
     deliveries_processed = 0
+    failed_attempts = 0
     while True:
-        user_input = get_valid_input()
+        user_input, attempts = get_valid_input()
+        failed_attempts += attempts
         if user_input is None:
             break
         else:
