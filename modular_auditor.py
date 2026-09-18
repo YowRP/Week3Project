@@ -33,27 +33,32 @@ inventory = 0
 rejected_entries = 0
 def get_valid_input():
     while True:
-        user_input = input("Please enter the stock quantity")
-        
-        if not user_input.isdigit():
-            print("Invalid input. Please enter a valid number.")
-            rejected_entries += 1
-            continue
+         user_input = input("Please enter the stock quantity: ")
+         if not user_input.isdigit():
+             print("Invalid input. Please enter a valid number.")
+             rejected_entries += 1
+             continue
+         elif int(user_input) < 0:
+             print("Invalid input. Please enter a non-negative number.")
+             rejected_entries += 1
+             continue
+         return int(user_input)
 
-        elif int(user_input) < 0:
-            print("Invalid input. Please enter a non-negative number.")
-            rejected_entries += 1
-            continue
-        
-        inventory += int(user_input)
+def process_delivery(user_input, inventory):
 
-        if inventory > 500 :
-                print("ALERT! Stock quantity has reached or exceeded 500 units.")
-                break
+    get_valid_input(user_input)
+    inventory += user_input
+    user_end = input("Do you want to add more stock? (yes/no): ")
+    if user_end.lower() == "no" or user_end.lower() == "n":
+        return inventory
+    else:
+        return get_valid_input()
 
-        user_end = input("Do you want to add more stock? (yes/no): ")
-        if user_end.lower() == "no" or user_end.lower() == "n":
-            break
-        else:
-            continue
+def calculate_tax_amount(inventory):
+    tax_rate = 0.1
+    tax_amount = inventory * tax_rate
+    return tax_amount
 
+def general_report()
+    
+    
