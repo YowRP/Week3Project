@@ -26,4 +26,8 @@ def calculate_tax(amount):
     tax_rate = 0.1
     return amount * tax_rate
 
+def generate_report(total_units, failed_attempts):
+    print("Total units will be : " + str(total_units))
+    print("Failed attempts : " + str(failed_attempts))
+
 
