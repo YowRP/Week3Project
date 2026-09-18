@@ -42,7 +42,7 @@ def get_valid_input():
              print("Invalid input. Please enter a non-negative number.")
              rejected_entries += 1
              continue
-         return int(user_input)
+         return int(user_input) and rejected_entries
 
 def process_delivery(user_input, inventory):
 
@@ -59,6 +59,10 @@ def calculate_tax_amount(inventory):
     tax_amount = inventory * tax_rate
     return tax_amount
 
-def general_report()
+def general_report(total_units, failed_attempts):
+    total_units = inventory
+    failed_attempts = rejected_entries
+    print("Total stock quantity:", total_units)
+    print("Total rejected entries:", failed_attempts)
     
     
