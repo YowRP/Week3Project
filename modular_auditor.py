@@ -1,19 +1,17 @@
 def get_valid_input():
+    failed_attempts = 0
     while True:
         user_input = input("Please enter the stock quantity: ")
-        # check for quit first
         if user_input.lower() == "quit" or user_input.lower() == "q":
-            return None
+            return None, failed_attempts
         
-        # check for valid non-negative integer
         if not user_input.isdigit():
             print("Invalid input. Please enter a valid number.")
+            failed_attempts += 1
             continue
-    
-        # if invalid, print message and continue looping
-        # if valid, return it
+
         if user_input.isdigit():
-            return int(user_input)
+            return int(user_input), failed_attempts
         
 
 def process_delivery(current_total, new_value):
@@ -30,7 +28,6 @@ def generate_report(total_units, failed_attempts):
 
 def main() :
     total_units = 0
-    failed_attempts = 0
     deliveries_processed = 0
     while True:
         user_input = get_valid_input()
