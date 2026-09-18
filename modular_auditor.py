@@ -41,6 +41,6 @@ def main() :
             tax = calculate_tax(user_input)
             deliveries_processed += 1
 
-    generate_report(total_units, failed_attempts)
+    generate_report(total_units, deliveries_processed, failed_attempts)
 
 
