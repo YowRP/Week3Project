@@ -42,3 +42,6 @@ def main() :
 
     generate_report(total_units, deliveries_processed, failed_attempts)
 
+if __name__ == "__main__":
+    main()
+
