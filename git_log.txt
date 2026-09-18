@@ -1,0 +1,29 @@
+commit 2e051a272264b839181fd4b7aaa3cf175512c88f (HEAD -> main)
+Author: Auditioning <aidenyow2006@gmail.com>
+Date:   Fri Sep 18 15:45:30 2026 +0800
+
+    get_valid_input def
+
+commit 5f44c87ce531d307a84740792abc57eedd509997 (HEAD -> main)
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Sep 18 15:48:28 2026 +0800
+
+    process delivery
+
+commit bf9664fc88c31dcc55413eb0cb5f29ac515ca3cf (HEAD -> main)
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Sep 18 15:49:49 2026 +0800
+
+    calculate tax
+
+commit 4797c01364e5f23499d7e78e43eeeef5162df4ba (HEAD -> main)
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Sep 18 15:51:49 2026 +0800
+
+    generate report
+
+commit 43e54a0ce5fc2af9386aa81e247cae6ceb3e889f (HEAD -> main)
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Sep 18 15:53:06 2026 +0800
+
+    main
